@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/flBig"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     tools:context=".Modelo">
 
     <androidx.cardview.widget.CardView
         android:layout_gravity="center"
+        android:fitsSystemWindows="true"
         android:layout_width="350dp"
         android:layout_height="550dp"
         app:cardCornerRadius="10dp"

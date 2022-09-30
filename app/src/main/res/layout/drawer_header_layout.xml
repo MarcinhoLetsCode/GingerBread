@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="#000000"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            tools:src="@tools:sample/avatars"
+            android:scaleType="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:scrollY="-0dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Name"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="my.email@email.com"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="?android:attr/borderlessButtonStyle"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/ic_baseline_arrow_drop_down"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:iconSize="30sp"
+        android:layout_weight="1"
+        app:iconPadding="1dp"
+        android:layout_gravity="bottom"
+        android:layout_width="20dp"
+        android:clickable="true"
+        android:layout_height="20dp"/>
+
+</LinearLayout>
