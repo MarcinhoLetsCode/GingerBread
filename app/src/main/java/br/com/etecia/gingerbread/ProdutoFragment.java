@@ -21,6 +21,7 @@ public class ProdutoFragment extends Fragment {
     public ProdutoFragment(int i) {
         this.i = i;
     }
+    public ProdutoFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

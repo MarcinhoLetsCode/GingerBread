@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
         setContentView(R.layout.drawer_layout);
+        new ProdutoFragment();
 
         drawerLayout = findViewById(R.id.drawerLayout);
         materialToolbar = findViewById(R.id.toolBar);
