@@ -12,6 +12,7 @@
             app:title="Hello World"
             app:menu="@menu/toolbar"
             app:navigationIcon="@drawable/ic_baseline_menu"
+            app:navigationIconTint="@color/white"
             app:titleTextColor="#fff"
             android:background="#010622"
             android:id="@+id/toolBar"
