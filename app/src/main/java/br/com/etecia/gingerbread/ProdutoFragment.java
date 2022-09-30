@@ -81,7 +81,6 @@ public class ProdutoFragment extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         recyclerView.hasFixedSize();
         ProductsAdapter productsAdapter = new ProductsAdapter(getContext(), produtoLista, i);
-        //new RecyclerHorizontal(produtoLista);
         recyclerView.setAdapter(productsAdapter);
 
         return v;
