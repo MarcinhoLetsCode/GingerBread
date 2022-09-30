@@ -48,6 +48,8 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, RecyclerHorizontal.class);
+                //new RecyclerHorizontal(2);
+                intent.putExtra("Posicao", holder.getAdapterPosition());
                 intent.putExtra("Produto", i);
                 context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }

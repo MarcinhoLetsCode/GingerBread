@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -21,13 +22,13 @@ import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
 public class RecyclerHorizontal extends AppCompatActivity {
 
-    private int i;
+    private int x;
     RecyclerView recyclerView;
     private List<Products> produtoLista;
 
-    public RecyclerHorizontal(int i) {
-        this.i = i;
-    }
+    //public RecyclerHorizontal(int i) {
+    //    this.x = i;
+    //}
 
     public RecyclerHorizontal() {}
 
@@ -41,8 +42,11 @@ public class RecyclerHorizontal extends AppCompatActivity {
         recyclerView.hasFixedSize();
 
         Intent intent = getIntent();
-        int produto;
+        int produto, posicao;
         produto = intent.getIntExtra("Produto", 0);
+        posicao = intent.getIntExtra("Posicao", 0);
+
+        recyclerView.scrollToPosition(posicao);
 
         switch (produto) {
             case 0:
@@ -104,6 +108,7 @@ public class RecyclerHorizontal extends AppCompatActivity {
 
         private Context context;
         private List<Products> produtoLista;
+        LinearLayoutManager layoutManager;
 
         public Adapter(Context context, List<Products> produtoLista) {
             this.context = context;
