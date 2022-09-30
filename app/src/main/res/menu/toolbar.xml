@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bnProcura"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_search"
+        android:title="Coffe"/>
+
+    <item
+        android:id="@+id/bnCesta"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_shopping_cart"
+        android:title="Muffin"/>
+
+</menu>
