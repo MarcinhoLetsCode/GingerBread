@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,20 +17,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
 public class RecyclerHorizontal extends AppCompatActivity {
 
-    private int x;
     RecyclerView recyclerView;
     private List<Products> produtoLista;
-
-    //public RecyclerHorizontal(int i) {
-    //    this.x = i;
-    //}
+    FloatingActionButton floatingActionButton;
 
     public RecyclerHorizontal() {}
 
@@ -40,6 +41,7 @@ public class RecyclerHorizontal extends AppCompatActivity {
         recyclerView = findViewById(R.id.rvBigCoffe);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.hasFixedSize();
+        floatingActionButton = findViewById(R.id.fabAdd);
 
         Intent intent = getIntent();
         int produto, posicao;
@@ -102,6 +104,21 @@ public class RecyclerHorizontal extends AppCompatActivity {
         Adapter coffeAdapter = new Adapter(this, produtoLista);
         recyclerView.setAdapter(coffeAdapter);
 
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -132,6 +149,14 @@ public class RecyclerHorizontal extends AppCompatActivity {
             holder.notaProduto.setNumStars(produtoLista.get(position).getRatingProduct());
             holder.favProduto.setImageResource(produtoLista.get(position).getFavorite());
             holder.precoProduto.setText(produtoLista.get(position).getPreco());
+
+
+            floatingActionButton.setOnClickListener(v -> {
+                int i = 1;
+                Toast.makeText(getApplicationContext(),
+                        i + " Item(ns) " + produtoLista.get(position).getnomeProduct() + " Added!",
+                        Toast.LENGTH_LONG).show();
+            });
         }
 
         @Override
