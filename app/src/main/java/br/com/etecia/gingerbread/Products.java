@@ -6,12 +6,12 @@ public class Products {
     String descricaoProduct;
     int ratingProduct;
     int favorite;
-    String preco;
+    double preco;
 
     public Products() {
     }
 
-    public Products(String nomeProduct, int imagemProduct, String descricaoProduct, int ratingProduct, int favorite, String preco) {
+    public Products(String nomeProduct, int imagemProduct, String descricaoProduct, int ratingProduct, int favorite, double preco) {
         this.nomeProduct = nomeProduct;
         this.imagemProduct = imagemProduct;
         this.descricaoProduct = descricaoProduct;
@@ -60,11 +60,11 @@ public class Products {
         this.favorite = favorite;
     }
 
-    public String getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 

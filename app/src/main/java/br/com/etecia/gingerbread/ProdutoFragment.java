@@ -36,12 +36,12 @@ public class ProdutoFragment extends Fragment {
                         "Café",
                         2,
                         R.drawable.ic_baseline_favorite,
-                        "R$ " + "1.10"));
-                produtoLista.add(new Products("Café com Leite", R.drawable.coffee, "Café", 3, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Capuccino", R.drawable.cappucino, "Café", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Frapuccino ", R.drawable.frappucino, "Café", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Café com Nutella", R.drawable.cafecnutella, "Café", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Café Expresso", R.drawable.cafeexpresso, "Café", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
+                        1.10));
+                produtoLista.add(new Products("Café com Leite", R.drawable.coffee, "Café", 3, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Capuccino", R.drawable.cappucino, "Café", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Frapuccino ", R.drawable.frappucino, "Café", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Café com Nutella", R.drawable.cafecnutella, "Café", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Café Expresso", R.drawable.cafeexpresso, "Café", 5, R.drawable.ic_baseline_favorite, 1.10));
                 break;
             case 1:
                 produtoLista = new ArrayList<>();
@@ -50,30 +50,30 @@ public class ProdutoFragment extends Fragment {
                         "Muffin",
                         2,
                         R.drawable.ic_baseline_favorite,
-                        "R$ " + "1.10"));
-                produtoLista.add(new Products("Muffin Tradicional", R.drawable.muffintradicional, "Muffin", 3, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Muffin de Morango", R.drawable.muffinmorango, "Muffin", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Muffin de Chocolate", R.drawable.muffinchocolate, "Muffin", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Muffin de Maçã", R.drawable.muffinmaca, "Muffin", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Muffin de Aveia", R.drawable.muffinaveia, "Muffin", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
+                        1.10));
+                produtoLista.add(new Products("Muffin Tradicional", R.drawable.muffintradicional, "Muffin", 3, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Muffin de Morango", R.drawable.muffinmorango, "Muffin", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Muffin de Chocolate", R.drawable.muffinchocolate, "Muffin", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Muffin de Maçã", R.drawable.muffinmaca, "Muffin", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Muffin de Aveia", R.drawable.muffinaveia, "Muffin", 5, R.drawable.ic_baseline_favorite, 1.10));
                 break;
             case 2:
                 produtoLista = new ArrayList<>();
-                produtoLista.add(new Products("Chá de Limão", R.drawable.chalimao, "Chá", 2, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Chá Preto", R.drawable.chapreto, "Chá", 3, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Chá de Erva Doce", R.drawable.chaervadoce, "Chá", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Chá de Camomila", R.drawable.chacamomila, "Chá", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Chá de Erva Sidreira", R.drawable.chaervasidreira, "Chá", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Chá de Hibisco", R.drawable.chahibisco, "Chá", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
+                produtoLista.add(new Products("Chá de Limão", R.drawable.chalimao, "Chá", 2, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Chá Preto", R.drawable.chapreto, "Chá", 3, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Chá de Erva Doce", R.drawable.chaervadoce, "Chá", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Chá de Camomila", R.drawable.chacamomila, "Chá", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Chá de Erva Sidreira", R.drawable.chaervasidreira, "Chá", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Chá de Hibisco", R.drawable.chahibisco, "Chá", 5, R.drawable.ic_baseline_favorite, 1.10));
                 break;
             case 3:
                 produtoLista = new ArrayList<>();
-                produtoLista.add(new Products("Donuts de Oreo", R.drawable.donutsoreo, "Donuts", 2, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Donuts de Bacon", R.drawable.donutsbacon, "Donuts", 3, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Donuts de Kinder Joy", R.drawable.donutskinder, "Donuts", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Donuts Brigadeiro", R.drawable.donutsbrigadeiro, "Donuts", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Donuts de Nutella", R.drawable.donutsnutella, "Donuts", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
-                produtoLista.add(new Products("Donuts de Morango", R.drawable.donutsmorango, "Donuts", 5, R.drawable.ic_baseline_favorite, "R$ " + "1.10"));
+                produtoLista.add(new Products("Donuts de Oreo", R.drawable.donutsoreo, "Donuts", 2, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Donuts de Bacon", R.drawable.donutsbacon, "Donuts", 3, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Donuts de Kinder Joy", R.drawable.donutskinder, "Donuts", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Donuts Brigadeiro", R.drawable.donutsbrigadeiro, "Donuts", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Donuts de Nutella", R.drawable.donutsnutella, "Donuts", 5, R.drawable.ic_baseline_favorite, 1.10));
+                produtoLista.add(new Products("Donuts de Morango", R.drawable.donutsmorango, "Donuts", 5, R.drawable.ic_baseline_favorite, 1.10));
             default:
                 break;
         }
