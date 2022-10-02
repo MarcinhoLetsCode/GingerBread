@@ -16,7 +16,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -160,16 +159,12 @@ public class RecyclerHorizontal extends AppCompatActivity {
             holder.favProduto.setImageResource(produtoLista.get(position).getFavorite());
             holder.precoProduto.setText(Double.toString(produtoLista.get(position).getPreco()));
 
-            menos.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            menos.setOnClickListener(v -> {
+                if (x > 1){
                     x--;
-                    Qtde.setText(Integer.toString(x));
-                    //Integer.toString(i) or String.valueOf(i)
-                    holder.precoProduto.setText(Double.toString(
-                            Double.parseDouble(String.format("%.03f",
-                                    produtoLista.get(position).getPreco() * x))));
                 }
+                AlteraQtde();
+                AlteraPreco(holder, position);
             });
 
             floatingActionButton.setOnClickListener(v -> {
@@ -177,24 +172,32 @@ public class RecyclerHorizontal extends AppCompatActivity {
                         x + " Item(ns) " + produtoLista.get(position).getnomeProduct() + " Added!",
                         Toast.LENGTH_LONG).show();
                 x = 1;
-                Qtde.setText(Integer.toString(x));
-                holder.precoProduto.setText(Double.toString(
-                        Double.parseDouble(String.format("%.03f",
-                                produtoLista.get(position).getPreco() * x))));
+                AlteraQtde();
+                AlteraPreco(holder, position);
             });
 
-            mais.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            mais.setOnClickListener(v -> {
+                if (x < 5){
                     x++;
-                    Qtde.setText(Integer.toString(x));
-                    //Integer.toString(i) or String.valueOf(i)
-                    //String.format("%.2f", "variavel");
-                    holder.precoProduto.setText(Double.toString(
-                            Double.parseDouble(String.format("%.03f",
-                            produtoLista.get(position).getPreco() * x))));
+                } else {
+                    Toast.makeText(getApplicationContext(),"Não Há Mais Unidades Disponíveis", Toast.LENGTH_SHORT).show();
                 }
+
+                AlteraQtde();
+                //Integer.toString(i) or String.valueOf(i)
+                //String.format("%.2f", "variavel");
+                AlteraPreco(holder, position);
             });
+        }
+
+        private void AlteraQtde() {
+            Qtde.setText(Integer.toString(x));
+        }
+
+        private void AlteraPreco(ViewHolder holder, int position) {
+            holder.precoProduto.setText(Double.toString(
+                    Double.parseDouble(String.format("%.03f",
+                            produtoLista.get(position).getPreco() * x))));
         }
 
         @Override
