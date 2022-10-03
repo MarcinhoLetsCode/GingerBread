@@ -105,7 +105,8 @@ public class RecyclerHorizontal extends AppCompatActivity {
         recyclerView.setAdapter(coffeAdapter);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setTitle("");
     }
 
     @Override
@@ -157,7 +158,9 @@ public class RecyclerHorizontal extends AppCompatActivity {
             holder.descricaoProduto.setText(produtoLista.get(position).getDescricaoProduct());
             holder.notaProduto.setNumStars(produtoLista.get(position).getRatingProduct());
             holder.favProduto.setImageResource(produtoLista.get(position).getFavorite());
-            holder.precoProduto.setText(Double.toString(produtoLista.get(position).getPreco()));
+            //holder.precoProduto.setText(Double.toString(produtoLista.get(position).getPreco()));
+            holder.precoProduto.setText(String.format("%.2f", produtoLista.get(position).getPreco()));
+            getSupportActionBar().setTitle(produtoLista.get(position).getnomeProduct());
 
             menos.setOnClickListener(v -> {
                 if (x > 1){
@@ -195,9 +198,9 @@ public class RecyclerHorizontal extends AppCompatActivity {
         }
 
         private void AlteraPreco(ViewHolder holder, int position) {
-            holder.precoProduto.setText(Double.toString(
-                    Double.parseDouble(String.format("%.03f",
-                            produtoLista.get(position).getPreco() * x))));
+            String qtde = String.format("%.2f", produtoLista.get(position).getPreco() * x);
+            //qtde = String.valueOf(Double.parseDouble(qtde));
+            holder.precoProduto.setText(qtde);
         }
 
         @Override
